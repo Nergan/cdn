@@ -1,12 +1,13 @@
 (function () {
+  // Capture current script tag reference before async execution
+  const currentScript = document.currentScript;
+
   const TEMPLATE = document.createElement('template');
   TEMPLATE.innerHTML = `
     <style>
       :host {
         display: block;
         position: fixed;
-        bottom: 18px;
-        right: 16px;
         z-index: 10000;
         pointer-events: auto;
       }
@@ -81,14 +82,17 @@
 
     connectedCallback() {
       this.updateTitle();
+      this.updatePosition();
     }
 
     static get observedAttributes() {
-      return ['lang', 'title'];
+      return ['lang', 'title', 'position', 'top', 'bottom', 'left', 'right'];
     }
 
-    attributeChangedCallback() {
+    attributeChangedCallback(name, oldValue, newValue) {
+      if (oldValue === newValue) return;
       this.updateTitle();
+      this.updatePosition();
     }
 
     updateTitle() {
@@ -111,15 +115,90 @@
 
       this.linkEl.setAttribute('title', titleText);
     }
+
+    updatePosition() {
+      const position = this.getAttribute('position') || 'bottom-right';
+      const top = this.getAttribute('top');
+      const bottom = this.getAttribute('bottom');
+      const left = this.getAttribute('left');
+      const right = this.getAttribute('right');
+
+      // Reset styles
+      this.style.top = 'auto';
+      this.style.bottom = 'auto';
+      this.style.left = 'auto';
+      this.style.right = 'auto';
+
+      // Preset base positions
+      switch (position) {
+        case 'top-left':
+          this.style.top = '18px';
+          this.style.left = '16px';
+          break;
+        case 'top-right':
+          this.style.top = '18px';
+          this.style.right = '16px';
+          break;
+        case 'bottom-left':
+          this.style.bottom = '18px';
+          this.style.left = '16px';
+          break;
+        case 'bottom-right':
+        default:
+          this.style.bottom = '18px';
+          this.style.right = '16px';
+          break;
+      }
+
+      // Explicit pixel/rem offsets override default preset offsets
+      if (top !== null) this.style.top = top;
+      if (bottom !== null) this.style.bottom = bottom;
+      if (left !== null) this.style.left = left;
+      if (right !== null) this.style.right = right;
+    }
   }
 
   if (!customElements.get('nargan-donate')) {
     customElements.define('nargan-donate', NarganDonate);
   }
 
+  function getScriptConfig() {
+    const config = {};
+    if (!currentScript) return config;
+
+    // 1. Parse URL query string parameters
+    try {
+      if (currentScript.src) {
+        const url = new URL(currentScript.src, window.location.href);
+        url.searchParams.forEach((value, key) => {
+          config[key] = value;
+        });
+      }
+    } catch (e) {
+      // Ignore URL parsing errors
+    }
+
+    // 2. Parse data-* attributes (overrides query parameters)
+    if (currentScript.dataset) {
+      for (const [key, value] of Object.entries(currentScript.dataset)) {
+        config[key] = value;
+      }
+    }
+
+    return config;
+  }
+
   function autoInject() {
     if (!document.querySelector('nargan-donate')) {
       const widget = document.createElement('nargan-donate');
+      const config = getScriptConfig();
+
+      for (const [key, value] of Object.entries(config)) {
+        if (value !== undefined && value !== null) {
+          widget.setAttribute(key, value);
+        }
+      }
+
       document.body.appendChild(widget);
     }
   }
