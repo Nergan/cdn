@@ -1,6 +1,27 @@
 (function () {
-  // Capture current script tag reference before async execution
-  const currentScript = document.currentScript;
+  let currentScript = document.currentScript;
+
+  function findScriptElement() {
+    if (currentScript && document.contains(currentScript)) {
+      return currentScript;
+    }
+    const scripts = Array.from(document.querySelectorAll('script'));
+    return (
+      scripts.find(s => s.src && s.src.includes('donate-widget')) ||
+      scripts.find(
+        s =>
+          s.dataset &&
+          (s.dataset.position ||
+            s.dataset.right ||
+            s.dataset.left ||
+            s.dataset.top ||
+            s.dataset.bottom ||
+            s.dataset.lang ||
+            s.dataset.title)
+      ) ||
+      null
+    );
+  }
 
   const TEMPLATE = document.createElement('template');
   TEMPLATE.innerHTML = `
@@ -8,6 +29,10 @@
       :host {
         display: block;
         position: fixed;
+        top: var(--nargan-top, auto);
+        bottom: var(--nargan-bottom, auto);
+        left: var(--nargan-left, auto);
+        right: var(--nargan-right, auto);
         z-index: 10000;
         pointer-events: auto;
       }
@@ -123,38 +148,45 @@
       const left = this.getAttribute('left');
       const right = this.getAttribute('right');
 
-      // Reset styles
-      this.style.top = 'auto';
-      this.style.bottom = 'auto';
-      this.style.left = 'auto';
-      this.style.right = 'auto';
+      let defaultTop = 'auto';
+      let defaultBottom = 'auto';
+      let defaultLeft = 'auto';
+      let defaultRight = 'auto';
 
-      // Preset base positions
       switch (position) {
         case 'top-left':
-          this.style.top = '18px';
-          this.style.left = '16px';
+          defaultTop = '18px';
+          defaultLeft = '16px';
           break;
         case 'top-right':
-          this.style.top = '18px';
-          this.style.right = '16px';
+          defaultTop = '18px';
+          defaultRight = '16px';
           break;
         case 'bottom-left':
-          this.style.bottom = '18px';
-          this.style.left = '16px';
+          defaultBottom = '18px';
+          defaultLeft = '16px';
           break;
         case 'bottom-right':
         default:
-          this.style.bottom = '18px';
-          this.style.right = '16px';
+          defaultBottom = '18px';
+          defaultRight = '16px';
           break;
       }
 
-      // Explicit pixel/rem offsets override default preset offsets
-      if (top !== null) this.style.top = top;
-      if (bottom !== null) this.style.bottom = bottom;
-      if (left !== null) this.style.left = left;
-      if (right !== null) this.style.right = right;
+      const finalTop = top !== null ? top : defaultTop;
+      const finalBottom = bottom !== null ? bottom : defaultBottom;
+      const finalLeft = left !== null ? left : defaultLeft;
+      const finalRight = right !== null ? right : defaultRight;
+
+      this.style.top = finalTop;
+      this.style.bottom = finalBottom;
+      this.style.left = finalLeft;
+      this.style.right = finalRight;
+
+      this.style.setProperty('--nargan-top', finalTop);
+      this.style.setProperty('--nargan-bottom', finalBottom);
+      this.style.setProperty('--nargan-left', finalLeft);
+      this.style.setProperty('--nargan-right', finalRight);
     }
   }
 
@@ -164,23 +196,25 @@
 
   function getScriptConfig() {
     const config = {};
-    if (!currentScript) return config;
 
-    // 1. Parse URL query string parameters
+    if (window.NARGAN_DONATE_CONFIG && typeof window.NARGAN_DONATE_CONFIG === 'object') {
+      Object.assign(config, window.NARGAN_DONATE_CONFIG);
+    }
+
+    const scriptEl = findScriptElement();
+    if (!scriptEl) return config;
+
     try {
-      if (currentScript.src) {
-        const url = new URL(currentScript.src, window.location.href);
+      if (scriptEl.src) {
+        const url = new URL(scriptEl.src, window.location.href);
         url.searchParams.forEach((value, key) => {
           config[key] = value;
         });
       }
-    } catch (e) {
-      // Ignore URL parsing errors
-    }
+    } catch (e) {}
 
-    // 2. Parse data-* attributes (overrides query parameters)
-    if (currentScript.dataset) {
-      for (const [key, value] of Object.entries(currentScript.dataset)) {
+    if (scriptEl.dataset) {
+      for (const [key, value] of Object.entries(scriptEl.dataset)) {
         config[key] = value;
       }
     }
@@ -189,17 +223,23 @@
   }
 
   function autoInject() {
-    if (!document.querySelector('nargan-donate')) {
-      const widget = document.createElement('nargan-donate');
-      const config = getScriptConfig();
+    let widget = document.querySelector('nargan-donate');
+    const config = getScriptConfig();
 
+    if (!widget) {
+      widget = document.createElement('nargan-donate');
       for (const [key, value] of Object.entries(config)) {
         if (value !== undefined && value !== null) {
           widget.setAttribute(key, value);
         }
       }
-
       document.body.appendChild(widget);
+    } else {
+      for (const [key, value] of Object.entries(config)) {
+        if (value !== undefined && value !== null && !widget.hasAttribute(key)) {
+          widget.setAttribute(key, value);
+        }
+      }
     }
   }
 
