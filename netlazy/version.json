@@ -1,7 +1,7 @@
 {
-  "version": "0.0.34",
-  "versionCode": 34,
-  "url": "https://cdn.jsdelivr.net/gh/Nergan/media@main/netlazy/apk/netlazy-0.0.34.apk",
+  "version": "0.0.35",
+  "versionCode": 35,
+  "url": "https://cdn.jsdelivr.net/gh/Nergan/cdn@main/netlazy/apk/netlazy-0.0.35.apk",
   "release_notes": "upd",
-  "sha256": "8360f23e9711bdfe514bed3fb97239cc8ffe0f486a6c286f673fe3dd2c81b49b"
+  "sha256": "c43701e0b5a6d8522c1922e6d1278a9f9148229b1fe8e40053e078b7a4b64aef"
 }
