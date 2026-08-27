@@ -1,7 +1,7 @@
 {
-  "version": "0.0.60",
-  "versionCode": 60,
-  "url": "https://cdn.jsdelivr.net/gh/Nergan/cdn@main/netlazy/apk/netlazy-0.0.60.apk",
-  "release_notes": "upd",
-  "sha256": "ccc2361d2bbd89bc0a729182392fdff391a6e99af72ba02c926df29509467f40"
+  "version": "0.0.61",
+  "versionCode": 61,
+  "url": "https://cdn.jsdelivr.net/gh/Nergan/cdn@main/netlazy/apk/netlazy-0.0.61.apk",
+  "release_notes": "orchestrator: \u0440\u0435\u0435\u0441\u0442\u0440 \u043f\u0440\u043e\u0435\u043a\u0442\u043e\u0432, \u0438\u0437\u043e\u043b\u044f\u0446\u0438\u044f worker-\u043f\u0440\u043e\u0446\u0435\u0441\u0441\u043e\u0432 \u0438 \u043f\u043e\u043b\u0438\u0442\u0438\u043a\u0438 HF.\n\n\u0414\u043e\u0431\u0430\u0432\u043b\u044f\u0435\u0442 manifest, supervisor, proxy \u0438 \u043b\u0438\u043c\u0438\u0442\u044b \u0440\u0435\u0441\u0443\u0440\u0441\u043e\u0432, \u0447\u0442\u043e\u0431\u044b \u043e\u0434\u0438\u043d \u043f\u0440\u043e\u0435\u043a\u0442 \u043d\u0435 \u0432\u0430\u043b\u0438\u043b \u0432\u0435\u0441\u044c Space; another \u0438 yellow_mirror \u0438\u0441\u043a\u043b\u044e\u0447\u0435\u043d\u044b \u0438\u0437 \u0430\u0432\u0442\u043e\u0434\u0435\u043f\u043b\u043e\u044f.\n\nCo-authored-by: Cursor <cursoragent@cursor.com>",
+  "sha256": "899ecd10fe297c5de9f06098ec2c4bc3e1d6dc0cf8a291f80824642f05e6f768"
 }
