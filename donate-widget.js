@@ -19,6 +19,9 @@
         position: fixed;
         z-index: 10000;
         pointer-events: auto;
+        touch-action: none;
+        user-select: none;
+        -webkit-user-select: none;
       }
 
       .donate-button {
@@ -29,6 +32,16 @@
         transition: transform 0.3s cubic-bezier(0.2, 0.9, 0.4, 1.1);
         text-decoration: none;
         outline: none;
+        cursor: grab;
+        touch-action: none;
+        -webkit-user-drag: none;
+        -webkit-touch-callout: none;
+      }
+
+      :host(.is-dragging) .donate-button {
+        cursor: grabbing;
+        transform: none;
+        transition: none;
       }
 
       .donate-button:hover {
@@ -48,11 +61,13 @@
         border: 0;
         margin: 0;
         padding: 0;
+        pointer-events: none;
+        -webkit-user-drag: none;
+        user-select: none;
       }
 
       .donate-button video {
         opacity: 0;
-        pointer-events: none;
       }
 
       .donate-button:hover img {
@@ -75,7 +90,7 @@
         }
       }
     </style>
-    <a href="https://boosty.to/nargan/donate" target="_blank" rel="noopener noreferrer" class="donate-button" id="donate-link">
+    <a href="https://boosty.to/nargan/donate" target="_blank" rel="noopener noreferrer" class="donate-button" id="donate-link" draggable="false">
       <img src="https://cdn.jsdelivr.net/gh/Nergan/media@main/donate-img.webp" alt="Donate">
       <video src="https://cdn.jsdelivr.net/gh/Nergan/media@main/donate-animation.webm" autoplay loop muted playsinline></video>
     </a>
@@ -92,6 +107,11 @@
     connectedCallback() {
       this.updateTitle();
       this.updatePosition();
+      this.setupDrag();
+    }
+
+    disconnectedCallback() {
+      if (this._cancelDrag) this._cancelDrag();
     }
 
     static get observedAttributes() {
@@ -171,6 +191,129 @@
       if (bottom !== null) this.style.bottom = bottom;
       if (left !== null) this.style.left = left;
       if (right !== null) this.style.right = right;
+    }
+
+    setupDrag() {
+      const link = this.linkEl;
+      if (!link || this._dragReady) return;
+      this._dragReady = true;
+      this.ensureDragCursorStyle();
+
+      const DRAG_THRESHOLD = 6;
+      let pointerId = null;
+      let startX = 0;
+      let startY = 0;
+      let originLeft = 0;
+      let originTop = 0;
+      let moved = false;
+      let blockClick = false;
+      let blockToken = 0;
+
+      const onClick = (event) => {
+        if (!blockClick) return;
+        blockClick = false;
+        event.preventDefault();
+        event.stopPropagation();
+      };
+
+      const clampToViewport = (left, top) => {
+        const width = this.offsetWidth || 44;
+        const height = this.offsetHeight || 44;
+        const viewport = window.visualViewport;
+        const viewWidth = viewport ? viewport.width : (document.documentElement.clientWidth || window.innerWidth);
+        const viewHeight = viewport ? viewport.height : (document.documentElement.clientHeight || window.innerHeight);
+        const maxLeft = Math.max(0, viewWidth - width);
+        const maxTop = Math.max(0, viewHeight - height);
+
+        if (left < 0) left = 0;
+        else if (left > maxLeft) left = maxLeft;
+        if (top < 0) top = 0;
+        else if (top > maxTop) top = maxTop;
+        return { left, top };
+      };
+
+      const onPointerMove = (event) => {
+        if (pointerId === null || event.pointerId !== pointerId) return;
+
+        const dx = event.clientX - startX;
+        const dy = event.clientY - startY;
+
+        if (!moved) {
+          if ((dx * dx + dy * dy) < DRAG_THRESHOLD * DRAG_THRESHOLD) return;
+          moved = true;
+          try {
+            link.setPointerCapture(event.pointerId);
+          } catch (e) {
+            // Capture is optional; window listeners still track the gesture.
+          }
+          this.classList.add('is-dragging');
+          this.style.right = 'auto';
+          this.style.bottom = 'auto';
+          document.documentElement.classList.add('nargan-donate-dragging');
+        }
+
+        event.preventDefault();
+
+        const next = clampToViewport(originLeft + dx, originTop + dy);
+        this.style.left = next.left + 'px';
+        this.style.top = next.top + 'px';
+      };
+
+      const endDrag = (event) => {
+        if (pointerId === null || event.pointerId !== pointerId) return;
+        const activeId = pointerId;
+        pointerId = null;
+        window.removeEventListener('pointermove', onPointerMove);
+        window.removeEventListener('pointerup', endDrag);
+        window.removeEventListener('pointercancel', endDrag);
+        this.classList.remove('is-dragging');
+        document.documentElement.classList.remove('nargan-donate-dragging');
+        try {
+          link.releasePointerCapture(activeId);
+        } catch (e) {
+          // Pointer is already released.
+        }
+
+        if (moved) {
+          blockClick = true;
+          const token = ++blockToken;
+          window.setTimeout(() => {
+            if (blockToken === token) blockClick = false;
+          }, 400);
+        }
+        moved = false;
+      };
+
+      this._cancelDrag = () => {
+        if (pointerId === null) return;
+        endDrag({ pointerId });
+      };
+
+      const onPointerDown = (event) => {
+        if (event.button !== 0 || pointerId !== null) return;
+        const rect = this.getBoundingClientRect();
+        pointerId = event.pointerId;
+        startX = event.clientX;
+        startY = event.clientY;
+        originLeft = rect.left;
+        originTop = rect.top;
+        moved = false;
+        window.addEventListener('pointermove', onPointerMove, { passive: false });
+        window.addEventListener('pointerup', endDrag);
+        window.addEventListener('pointercancel', endDrag);
+      };
+
+      link.addEventListener('pointerdown', onPointerDown);
+      link.addEventListener('click', onClick, true);
+      link.addEventListener('dragstart', (event) => event.preventDefault());
+    }
+
+    ensureDragCursorStyle() {
+      if (document.getElementById('nargan-donate-drag-style')) return;
+      const style = document.createElement('style');
+      style.id = 'nargan-donate-drag-style';
+      style.textContent = 'html.nargan-donate-dragging, html.nargan-donate-dragging * { cursor: grabbing !important; user-select: none !important; -webkit-user-select: none !important; }';
+      (document.head || document.documentElement).appendChild(style);
     }
   }
 
