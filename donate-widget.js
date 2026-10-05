@@ -200,20 +200,59 @@
       this.ensureDragCursorStyle();
 
       const DRAG_THRESHOLD = 6;
+      const CLICK_SUPPRESS_MS = 700;
+      const linkHref = link.getAttribute('href');
       let pointerId = null;
       let startX = 0;
       let startY = 0;
       let originLeft = 0;
       let originTop = 0;
       let moved = false;
-      let blockClick = false;
-      let blockToken = 0;
+      let pressIsDrag = false;
+      let suppressClick = false;
+      let swallowNextClick = false;
+      let dragEndedAt = 0;
+      let lastPointerDownAt = 0;
+      let suppressTimer = 0;
+
+      const restoreHref = () => {
+        if (linkHref && link.getAttribute('href') !== linkHref) {
+          link.setAttribute('href', linkHref);
+        }
+      };
+
+      const suppressNavigation = () => {
+        suppressClick = true;
+        link.removeAttribute('href');
+      };
+
+      const scheduleRestore = () => {
+        window.clearTimeout(suppressTimer);
+        suppressTimer = window.setTimeout(() => {
+          suppressClick = false;
+          restoreHref();
+        }, CLICK_SUPPRESS_MS);
+      };
 
       const onClick = (event) => {
-        if (!blockClick) return;
-        blockClick = false;
+        if (!suppressClick) return;
+
+        const startedNewPress = dragEndedAt > 0 && lastPointerDownAt > dragEndedAt && !pressIsDrag;
+        if (startedNewPress) {
+          suppressClick = false;
+          swallowNextClick = false;
+          window.clearTimeout(suppressTimer);
+          restoreHref();
+          return;
+        }
+
+        const path = event.composedPath();
+        const onWidget = path.includes(link) || path.includes(this);
+        if (!onWidget && !swallowNextClick) return;
+
         event.preventDefault();
-        event.stopPropagation();
+        event.stopImmediatePropagation();
+        swallowNextClick = false;
       };
 
       const clampToViewport = (left, top) => {
@@ -241,6 +280,8 @@
         if (!moved) {
           if ((dx * dx + dy * dy) < DRAG_THRESHOLD * DRAG_THRESHOLD) return;
           moved = true;
+          pressIsDrag = true;
+          suppressNavigation();
           try {
             link.setPointerCapture(event.pointerId);
           } catch (e) {
@@ -275,11 +316,10 @@
         }
 
         if (moved) {
-          blockClick = true;
-          const token = ++blockToken;
-          window.setTimeout(() => {
-            if (blockToken === token) blockClick = false;
-          }, 400);
+          dragEndedAt = Date.now();
+          swallowNextClick = true;
+          scheduleRestore();
+          if (event.cancelable) event.preventDefault();
         }
         moved = false;
       };
@@ -291,6 +331,8 @@
 
       const onPointerDown = (event) => {
         if (event.button !== 0 || pointerId !== null) return;
+        lastPointerDownAt = Date.now();
+        pressIsDrag = false;
         const rect = this.getBoundingClientRect();
         pointerId = event.pointerId;
         startX = event.clientX;
@@ -305,6 +347,8 @@
 
       link.addEventListener('pointerdown', onPointerDown);
       link.addEventListener('click', onClick, true);
+      link.addEventListener('auxclick', onClick, true);
+      window.addEventListener('click', onClick, true);
       link.addEventListener('dragstart', (event) => event.preventDefault());
     }
 
