@@ -1,7 +1,7 @@
 {
-  "version": "0.0.64",
-  "versionCode": 64,
-  "url": "https://cdn.jsdelivr.net/gh/Nergan/cdn@main/netlazy/apk/netlazy-0.0.64.apk",
-  "release_notes": "The pages that already answer a question should answer the same question as JSON.\n\nCo-authored-by: Cursor <cursoragent@cursor.com>",
-  "sha256": "8fd7b2c59e25441021077e82c7be595d9c86abb7eb282919cdd09277737f0611"
+  "version": "0.0.65",
+  "versionCode": 65,
+  "url": "https://cdn.jsdelivr.net/gh/Nergan/cdn@main/netlazy/apk/netlazy-0.0.65.apk",
+  "release_notes": "A file address should stay on a page that already exists.\n\nCo-authored-by: Cursor <cursoragent@cursor.com>",
+  "sha256": "e6b9796d14d7cd3ca44f3fb02dece3c18ecdf3b7fb4ce9048ad97ca5614ec5a1"
 }
