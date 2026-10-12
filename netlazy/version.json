@@ -1,7 +1,7 @@
 {
-  "version": "0.0.65",
-  "versionCode": 65,
-  "url": "https://cdn.jsdelivr.net/gh/Nergan/cdn@main/netlazy/apk/netlazy-0.0.65.apk",
-  "release_notes": "A file address should stay on a page that already exists.\n\nCo-authored-by: Cursor <cursoragent@cursor.com>",
-  "sha256": "e6b9796d14d7cd3ca44f3fb02dece3c18ecdf3b7fb4ce9048ad97ca5614ec5a1"
+  "version": "0.0.66",
+  "versionCode": 66,
+  "url": "https://cdn.jsdelivr.net/gh/Nergan/cdn@main/netlazy/apk/netlazy-0.0.66.apk",
+  "release_notes": "upd",
+  "sha256": "b26c1fb68fd1923d7e03f91ac32d0bc0f96be0ae9aa807b97257e3eb4798f066"
 }
