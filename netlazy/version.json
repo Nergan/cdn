@@ -1,7 +1,7 @@
 {
-  "version": "0.0.66",
-  "versionCode": 66,
-  "url": "https://cdn.jsdelivr.net/gh/Nergan/cdn@main/netlazy/apk/netlazy-0.0.66.apk",
-  "release_notes": "upd",
-  "sha256": "b26c1fb68fd1923d7e03f91ac32d0bc0f96be0ae9aa807b97257e3eb4798f066"
+  "version": "0.0.67",
+  "versionCode": 67,
+  "url": "https://cdn.jsdelivr.net/gh/Nergan/cdn@main/netlazy/apk/netlazy-0.0.67.apk",
+  "release_notes": "An alternative client may use the service, and scratch pages stay out of the tree.\n\nCo-authored-by: Cursor <cursoragent@cursor.com>",
+  "sha256": "0642488d68ee51296249a30a4b55be1c70b761d29975f6fa086202fee6e1d711"
 }
