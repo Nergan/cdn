@@ -1,7 +1,7 @@
 {
-  "version": "0.0.72",
-  "versionCode": 72,
-  "url": "https://cdn.jsdelivr.net/gh/Nergan/cdn@main/netlazy/apk/netlazy-0.0.72.apk",
-  "release_notes": "On a phone the profile tag search sits at the bottom, the same way the feed does.\n\nCo-authored-by: Cursor <cursoragent@cursor.com>",
-  "sha256": "738080d5b1e0d56f2ae711e0a15040847d0cd9db4668d8254462647e400f34e4"
+  "version": "0.0.73",
+  "versionCode": 73,
+  "url": "https://cdn.jsdelivr.net/gh/Nergan/cdn@main/netlazy/apk/netlazy-0.0.73.apk",
+  "release_notes": "Job, hiring, and AI tags can be chosen on a profile.\n\nCo-authored-by: Cursor <cursoragent@cursor.com>",
+  "sha256": "29eb96c964e504d94e82aeab657b8a3d2777d32ad1612da87a61b6e7127b2f5a"
 }
