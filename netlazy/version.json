@@ -1,7 +1,7 @@
 {
-  "version": "0.0.78",
-  "versionCode": 78,
-  "url": "https://cdn.jsdelivr.net/gh/Nergan/cdn@main/netlazy/apk/netlazy-0.0.78.apk",
-  "release_notes": "A shared profile address stays on the card it opened, and the pointer shows only when that card has a link.\n\nCo-authored-by: Cursor <cursoragent@cursor.com>",
-  "sha256": "ac80a8fe2334c0b1325ff98152f95cca60564cc383d73cbb9fd97b1c94659005"
+  "version": "0.0.79",
+  "versionCode": 79,
+  "url": "https://cdn.jsdelivr.net/gh/Nergan/cdn@main/netlazy/apk/netlazy-0.0.79.apk",
+  "release_notes": "The feed shows a loading mark while other profiles are still arriving, and profile link buttons show an hourglass until they finish.\n\nCo-authored-by: Cursor <cursoragent@cursor.com>",
+  "sha256": "cba3f1ced113be1a7792554fce424c6912aadccc98a48bcec0c393dc3d544207"
 }
