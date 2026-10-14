@@ -1,7 +1,7 @@
 {
-  "version": "0.0.67",
-  "versionCode": 67,
-  "url": "https://cdn.jsdelivr.net/gh/Nergan/cdn@main/netlazy/apk/netlazy-0.0.67.apk",
-  "release_notes": "An alternative client may use the service, and scratch pages stay out of the tree.\n\nCo-authored-by: Cursor <cursoragent@cursor.com>",
-  "sha256": "0642488d68ee51296249a30a4b55be1c70b761d29975f6fa086202fee6e1d711"
+  "version": "0.0.68",
+  "versionCode": 68,
+  "url": "https://cdn.jsdelivr.net/gh/Nergan/cdn@main/netlazy/apk/netlazy-0.0.68.apk",
+  "release_notes": "The site can switch between the previous interface and a flat one from config.\n\nCo-authored-by: Cursor <cursoragent@cursor.com>",
+  "sha256": "54828a0ebacc18ae2b249d9974dc9987a6272f32a04c8508a52e14130d00d7e3"
 }
