@@ -1,7 +1,7 @@
 {
-  "version": "0.0.76",
-  "versionCode": 76,
-  "url": "https://cdn.jsdelivr.net/gh/Nergan/cdn@main/netlazy/apk/netlazy-0.0.76.apk",
-  "release_notes": "Profile cards show where a link can be copied, open contact links, and stay free of navigation before signup.\n\nCo-authored-by: Cursor <cursoragent@cursor.com>",
-  "sha256": "296448e6e4a4cc60968d019a99a0ece1bc1d65f643c22f275bf118ef586c1999"
+  "version": "0.0.77",
+  "versionCode": 77,
+  "url": "https://cdn.jsdelivr.net/gh/Nergan/cdn@main/netlazy/apk/netlazy-0.0.77.apk",
+  "release_notes": "Profile links sit under the media column, and the owner can copy their own feed card.\n\nCo-authored-by: Cursor <cursoragent@cursor.com>",
+  "sha256": "9a81ab59bdefc4f06c5aebe1994ce776a084027ff29154126e505e54a765702b"
 }
