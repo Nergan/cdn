@@ -1,7 +1,7 @@
 {
-  "version": "0.0.73",
-  "versionCode": 73,
-  "url": "https://cdn.jsdelivr.net/gh/Nergan/cdn@main/netlazy/apk/netlazy-0.0.73.apk",
-  "release_notes": "Job, hiring, and AI tags can be chosen on a profile.\n\nCo-authored-by: Cursor <cursoragent@cursor.com>",
-  "sha256": "29eb96c964e504d94e82aeab657b8a3d2777d32ad1612da87a61b6e7127b2f5a"
+  "version": "0.0.74",
+  "versionCode": 74,
+  "url": "https://cdn.jsdelivr.net/gh/Nergan/cdn@main/netlazy/apk/netlazy-0.0.74.apk",
+  "release_notes": "Unpaid and free tags can be chosen on a profile.\n\nCo-authored-by: Cursor <cursoragent@cursor.com>",
+  "sha256": "4cf5e435c0b84efb3abb64c6c9a8565082fc51b407447ea34a3e0744b3efce4e"
 }
