@@ -1,7 +1,7 @@
 {
-  "version": "0.0.71",
-  "versionCode": 71,
-  "url": "https://cdn.jsdelivr.net/gh/Nergan/cdn@main/netlazy/apk/netlazy-0.0.71.apk",
-  "release_notes": "Removing a profile tag fades out the same way it fades in.\n\nCo-authored-by: Cursor <cursoragent@cursor.com>",
-  "sha256": "1acb60e0f755d7c9c77dfa94b3a2cf239428a47ce12cd38f80463495d480c304"
+  "version": "0.0.72",
+  "versionCode": 72,
+  "url": "https://cdn.jsdelivr.net/gh/Nergan/cdn@main/netlazy/apk/netlazy-0.0.72.apk",
+  "release_notes": "On a phone the profile tag search sits at the bottom, the same way the feed does.\n\nCo-authored-by: Cursor <cursoragent@cursor.com>",
+  "sha256": "738080d5b1e0d56f2ae711e0a15040847d0cd9db4668d8254462647e400f34e4"
 }
