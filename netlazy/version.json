@@ -1,7 +1,7 @@
 {
-  "version": "0.0.68",
-  "versionCode": 68,
-  "url": "https://cdn.jsdelivr.net/gh/Nergan/cdn@main/netlazy/apk/netlazy-0.0.68.apk",
-  "release_notes": "The site can switch between the previous interface and a flat one from config.\n\nCo-authored-by: Cursor <cursoragent@cursor.com>",
-  "sha256": "54828a0ebacc18ae2b249d9974dc9987a6272f32a04c8508a52e14130d00d7e3"
+  "version": "0.0.69",
+  "versionCode": 69,
+  "url": "https://cdn.jsdelivr.net/gh/Nergan/cdn@main/netlazy/apk/netlazy-0.0.69.apk",
+  "release_notes": "An empty or private-only profile stays out of the feed, and profile tags follow the feed search.\n\nCo-authored-by: Cursor <cursoragent@cursor.com>",
+  "sha256": "71895beaef27126dff8eb639eaff8aeb90c8ccaff340d51e735ca2b8499791c5"
 }
