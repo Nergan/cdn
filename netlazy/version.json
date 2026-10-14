@@ -1,7 +1,7 @@
 {
-  "version": "0.0.79",
-  "versionCode": 79,
-  "url": "https://cdn.jsdelivr.net/gh/Nergan/cdn@main/netlazy/apk/netlazy-0.0.79.apk",
-  "release_notes": "The feed shows a loading mark while other profiles are still arriving, and profile link buttons show an hourglass until they finish.\n\nCo-authored-by: Cursor <cursoragent@cursor.com>",
-  "sha256": "cba3f1ced113be1a7792554fce424c6912aadccc98a48bcec0c393dc3d544207"
+  "version": "0.0.80",
+  "versionCode": 80,
+  "url": "https://cdn.jsdelivr.net/gh/Nergan/cdn@main/netlazy/apk/netlazy-0.0.80.apk",
+  "release_notes": "A registered viewer can exchange contacts from a profile opened by its link.\n\nCo-authored-by: Cursor <cursoragent@cursor.com>",
+  "sha256": "ad72c10c0e33d59f575fcd5794cd8782337f8dac504990825d1d6bae33f807b1"
 }
