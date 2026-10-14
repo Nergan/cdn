@@ -1,7 +1,7 @@
 {
-  "version": "0.0.74",
-  "versionCode": 74,
-  "url": "https://cdn.jsdelivr.net/gh/Nergan/cdn@main/netlazy/apk/netlazy-0.0.74.apk",
-  "release_notes": "Unpaid and free tags can be chosen on a profile.\n\nCo-authored-by: Cursor <cursoragent@cursor.com>",
-  "sha256": "4cf5e435c0b84efb3abb64c6c9a8565082fc51b407447ea34a3e0744b3efce4e"
+  "version": "0.0.75",
+  "versionCode": 75,
+  "url": "https://cdn.jsdelivr.net/gh/Nergan/cdn@main/netlazy/apk/netlazy-0.0.75.apk",
+  "release_notes": "The feed lists newer profiles first and can be opened before signup.\n\nCo-authored-by: Cursor <cursoragent@cursor.com>",
+  "sha256": "0764ebebb01da091ca6f93434cd5bbc4682a25cd4a4e480864c83dec3ac15f01"
 }
