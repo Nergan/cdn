@@ -1,7 +1,7 @@
 {
-  "version": "0.0.75",
-  "versionCode": 75,
-  "url": "https://cdn.jsdelivr.net/gh/Nergan/cdn@main/netlazy/apk/netlazy-0.0.75.apk",
-  "release_notes": "The feed lists newer profiles first and can be opened before signup.\n\nCo-authored-by: Cursor <cursoragent@cursor.com>",
-  "sha256": "0764ebebb01da091ca6f93434cd5bbc4682a25cd4a4e480864c83dec3ac15f01"
+  "version": "0.0.76",
+  "versionCode": 76,
+  "url": "https://cdn.jsdelivr.net/gh/Nergan/cdn@main/netlazy/apk/netlazy-0.0.76.apk",
+  "release_notes": "Profile cards show where a link can be copied, open contact links, and stay free of navigation before signup.\n\nCo-authored-by: Cursor <cursoragent@cursor.com>",
+  "sha256": "296448e6e4a4cc60968d019a99a0ece1bc1d65f643c22f275bf118ef586c1999"
 }
