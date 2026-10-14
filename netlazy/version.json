@@ -1,7 +1,7 @@
 {
-  "version": "0.0.70",
-  "versionCode": 70,
-  "url": "https://cdn.jsdelivr.net/gh/Nergan/cdn@main/netlazy/apk/netlazy-0.0.70.apk",
-  "release_notes": "Profile tag chips stay put, and GitHub keeps only the latest netlazy release.\n\nCo-authored-by: Cursor <cursoragent@cursor.com>",
-  "sha256": "dd06259729ed4e5f59939f0809f72911cf4341f507c91b9bdaa638338b97a8a6"
+  "version": "0.0.71",
+  "versionCode": 71,
+  "url": "https://cdn.jsdelivr.net/gh/Nergan/cdn@main/netlazy/apk/netlazy-0.0.71.apk",
+  "release_notes": "Removing a profile tag fades out the same way it fades in.\n\nCo-authored-by: Cursor <cursoragent@cursor.com>",
+  "sha256": "1acb60e0f755d7c9c77dfa94b3a2cf239428a47ce12cd38f80463495d480c304"
 }
