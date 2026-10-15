@@ -1,7 +1,7 @@
 {
-  "version": "0.0.84",
-  "versionCode": 84,
-  "url": "https://cdn.jsdelivr.net/gh/Nergan/cdn@main/netlazy/apk/netlazy-0.0.84.apk",
-  "release_notes": "Feed contact links underline only on hover, and copying a profile link shows a ring from the click.\n\nCo-authored-by: Cursor <cursoragent@cursor.com>",
-  "sha256": "bc107a0b6e75871f410b03a50152b7bff10f7d2730ae4de2992bfb759955d299"
+  "version": "0.0.85",
+  "versionCode": 85,
+  "url": "https://cdn.jsdelivr.net/gh/Nergan/cdn@main/netlazy/apk/netlazy-0.0.85.apk",
+  "release_notes": "Empty space in a feed card's bio and contacts copies the profile link, while a contact link opens only from its own text.\n\nCo-authored-by: Cursor <cursoragent@cursor.com>",
+  "sha256": "d9d2a17dea923b8ad3ce21ada774e43087421cb345aa1eab3c7cfaf266bfef0c"
 }
