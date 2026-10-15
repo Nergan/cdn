@@ -1,7 +1,7 @@
 {
-  "version": "0.0.82",
-  "versionCode": 82,
-  "url": "https://cdn.jsdelivr.net/gh/Nergan/cdn@main/netlazy/apk/netlazy-0.0.82.apk",
-  "release_notes": "A linked feed card takes on the same green as the rest of the interface, and both READMEs explain how a client signs and reads the API.\n\nCo-authored-by: Cursor <cursoragent@cursor.com>",
-  "sha256": "ea5e885e5980e996c3c11385672b28af292dd2db5929d439ff23abfe8345fc4a"
+  "version": "0.0.83",
+  "versionCode": 83,
+  "url": "https://cdn.jsdelivr.net/gh/Nergan/cdn@main/netlazy/apk/netlazy-0.0.83.apk",
+  "release_notes": "Leaving a shared profile loads the feed, so other cards appear beside the viewer's own.\n\nCo-authored-by: Cursor <cursoragent@cursor.com>",
+  "sha256": "4bfe37573f181c014d87a4039f7cf867a9cbc9a20faafc0e36e4f12c6f9dd1f7"
 }
