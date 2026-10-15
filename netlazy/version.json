@@ -1,7 +1,7 @@
 {
-  "version": "0.0.89",
-  "versionCode": 89,
-  "url": "https://cdn.jsdelivr.net/gh/Nergan/cdn@main/netlazy/apk/netlazy-0.0.89.apk",
-  "release_notes": "Request notifications stay on by default and can be limited by handshake type, even when the site tab is closed.\n\nCo-authored-by: Cursor <cursoragent@cursor.com>",
-  "sha256": "fe07a0e7818aa22f86156442f8c72579120ea80e95e34ac595cebdf71c5b47c1"
+  "version": "0.0.90",
+  "versionCode": 90,
+  "url": "https://cdn.jsdelivr.net/gh/Nergan/cdn@main/netlazy/apk/netlazy-0.0.90.apk",
+  "release_notes": "The notification master switch turns every type off, the send button uses the pointer, and push registration no longer waits on a worker the page cannot use or starts Firebase when it is not configured.\n\nCo-authored-by: Cursor <cursoragent@cursor.com>",
+  "sha256": "e31c890b77c5292cbade5268a0c9afc0f2d2a23cf86cfb41ea994de6fe0f50d4"
 }
