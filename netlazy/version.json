@@ -1,7 +1,7 @@
 {
-  "version": "0.0.80",
-  "versionCode": 80,
-  "url": "https://cdn.jsdelivr.net/gh/Nergan/cdn@main/netlazy/apk/netlazy-0.0.80.apk",
-  "release_notes": "A registered viewer can exchange contacts from a profile opened by its link.\n\nCo-authored-by: Cursor <cursoragent@cursor.com>",
-  "sha256": "ad72c10c0e33d59f575fcd5794cd8782337f8dac504990825d1d6bae33f807b1"
+  "version": "0.0.81",
+  "versionCode": 81,
+  "url": "https://cdn.jsdelivr.net/gh/Nergan/cdn@main/netlazy/apk/netlazy-0.0.81.apk",
+  "release_notes": "Other people's profiles expose only public fields, and feed reads no longer collide on the hash chain.\n\nCo-authored-by: Cursor <cursoragent@cursor.com>",
+  "sha256": "388ae688843ab87ef3d0a374437e5161b880273f0da14c6f0efadbc432ec7d5a"
 }
