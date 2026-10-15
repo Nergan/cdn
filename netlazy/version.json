@@ -1,7 +1,7 @@
 {
-  "version": "0.0.83",
-  "versionCode": 83,
-  "url": "https://cdn.jsdelivr.net/gh/Nergan/cdn@main/netlazy/apk/netlazy-0.0.83.apk",
-  "release_notes": "Leaving a shared profile loads the feed, so other cards appear beside the viewer's own.\n\nCo-authored-by: Cursor <cursoragent@cursor.com>",
-  "sha256": "4bfe37573f181c014d87a4039f7cf867a9cbc9a20faafc0e36e4f12c6f9dd1f7"
+  "version": "0.0.84",
+  "versionCode": 84,
+  "url": "https://cdn.jsdelivr.net/gh/Nergan/cdn@main/netlazy/apk/netlazy-0.0.84.apk",
+  "release_notes": "Feed contact links underline only on hover, and copying a profile link shows a ring from the click.\n\nCo-authored-by: Cursor <cursoragent@cursor.com>",
+  "sha256": "bc107a0b6e75871f410b03a50152b7bff10f7d2730ae4de2992bfb759955d299"
 }
