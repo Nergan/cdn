@@ -1,7 +1,7 @@
 {
-  "version": "0.0.92",
-  "versionCode": 92,
-  "url": "https://cdn.jsdelivr.net/gh/Nergan/cdn@main/netlazy/apk/netlazy-0.0.92.apk",
-  "release_notes": "The notification setting says these are desktop notifications in every interface language.\n\nCo-authored-by: Cursor <cursoragent@cursor.com>",
-  "sha256": "ea2885579312307f6c55613ef9573af1b3ead317db818b23535a26e84ed8750c"
+  "version": "0.0.93",
+  "versionCode": 93,
+  "url": "https://cdn.jsdelivr.net/gh/Nergan/cdn@main/netlazy/apk/netlazy-0.0.93.apk",
+  "release_notes": "A profile opened from the inbox can copy its public link, the same way a feed card does.\n\nCo-authored-by: Cursor <cursoragent@cursor.com>",
+  "sha256": "77c4740e27d5d3cf93dfd3729dfe65288390879ed89fad4e1dcc5bfdea15cc73"
 }
