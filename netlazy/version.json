@@ -1,7 +1,7 @@
 {
-  "version": "0.0.90",
-  "versionCode": 90,
-  "url": "https://cdn.jsdelivr.net/gh/Nergan/cdn@main/netlazy/apk/netlazy-0.0.90.apk",
-  "release_notes": "The notification master switch turns every type off, the send button uses the pointer, and push registration no longer waits on a worker the page cannot use or starts Firebase when it is not configured.\n\nCo-authored-by: Cursor <cursoragent@cursor.com>",
-  "sha256": "e31c890b77c5292cbade5268a0c9afc0f2d2a23cf86cfb41ea994de6fe0f50d4"
+  "version": "0.0.91",
+  "versionCode": 91,
+  "url": "https://cdn.jsdelivr.net/gh/Nergan/cdn@main/netlazy/apk/netlazy-0.0.91.apk",
+  "release_notes": "A phone back gesture from an open chat returns to the inbox, deleting a resolved request clears the sent mark immediately, and a phone browser can subscribe to notifications from a click.\n\nCo-authored-by: Cursor <cursoragent@cursor.com>",
+  "sha256": "0ead3dbe5562e7024f2d50f1a4e38eb416032f3685fd02527c3eac7c0fec8c4a"
 }
