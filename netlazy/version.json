@@ -1,7 +1,7 @@
 {
-  "version": "0.0.86",
-  "versionCode": 86,
-  "url": "https://cdn.jsdelivr.net/gh/Nergan/cdn@main/netlazy/apk/netlazy-0.0.86.apk",
-  "release_notes": "The profile-link ripple expands as soft gradient rings instead of a hard edge.\n\nCo-authored-by: Cursor <cursoragent@cursor.com>",
-  "sha256": "51454c580461cd817b6ea3f3842242ff6b7969fe12d38d02fb0fdab94cb05006"
+  "version": "0.0.87",
+  "versionCode": 87,
+  "url": "https://cdn.jsdelivr.net/gh/Nergan/cdn@main/netlazy/apk/netlazy-0.0.87.apk",
+  "release_notes": "A guest can change theme and language from the feed, and can also return to the feed from a shared profile.\n\nCo-authored-by: Cursor <cursoragent@cursor.com>",
+  "sha256": "fe6ce777b5c0b6cfe9edd2ebabc2333c088adc36a042b29f2355294d98cfa9c4"
 }
