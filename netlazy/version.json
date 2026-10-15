@@ -1,7 +1,7 @@
 {
-  "version": "0.0.85",
-  "versionCode": 85,
-  "url": "https://cdn.jsdelivr.net/gh/Nergan/cdn@main/netlazy/apk/netlazy-0.0.85.apk",
-  "release_notes": "Empty space in a feed card's bio and contacts copies the profile link, while a contact link opens only from its own text.\n\nCo-authored-by: Cursor <cursoragent@cursor.com>",
-  "sha256": "d9d2a17dea923b8ad3ce21ada774e43087421cb345aa1eab3c7cfaf266bfef0c"
+  "version": "0.0.86",
+  "versionCode": 86,
+  "url": "https://cdn.jsdelivr.net/gh/Nergan/cdn@main/netlazy/apk/netlazy-0.0.86.apk",
+  "release_notes": "The profile-link ripple expands as soft gradient rings instead of a hard edge.\n\nCo-authored-by: Cursor <cursoragent@cursor.com>",
+  "sha256": "51454c580461cd817b6ea3f3842242ff6b7969fe12d38d02fb0fdab94cb05006"
 }
