@@ -1,7 +1,7 @@
 {
-  "version": "0.0.88",
-  "versionCode": 88,
-  "url": "https://cdn.jsdelivr.net/gh/Nergan/cdn@main/netlazy/apk/netlazy-0.0.88.apk",
-  "release_notes": "Leaving a shared profile pushes a feed history entry, so the browser back button returns to that profile.\n\nCo-authored-by: Cursor <cursoragent@cursor.com>",
-  "sha256": "5268fbbe8af5e7d6a88933a1d8372ad13cfeefe0bf4b6c03a5e34e25eb29b634"
+  "version": "0.0.89",
+  "versionCode": 89,
+  "url": "https://cdn.jsdelivr.net/gh/Nergan/cdn@main/netlazy/apk/netlazy-0.0.89.apk",
+  "release_notes": "Request notifications stay on by default and can be limited by handshake type, even when the site tab is closed.\n\nCo-authored-by: Cursor <cursoragent@cursor.com>",
+  "sha256": "fe07a0e7818aa22f86156442f8c72579120ea80e95e34ac595cebdf71c5b47c1"
 }
