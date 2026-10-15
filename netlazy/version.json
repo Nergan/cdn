@@ -1,7 +1,7 @@
 {
-  "version": "0.0.91",
-  "versionCode": 91,
-  "url": "https://cdn.jsdelivr.net/gh/Nergan/cdn@main/netlazy/apk/netlazy-0.0.91.apk",
-  "release_notes": "A phone back gesture from an open chat returns to the inbox, deleting a resolved request clears the sent mark immediately, and a phone browser can subscribe to notifications from a click.\n\nCo-authored-by: Cursor <cursoragent@cursor.com>",
-  "sha256": "0ead3dbe5562e7024f2d50f1a4e38eb416032f3685fd02527c3eac7c0fec8c4a"
+  "version": "0.0.92",
+  "versionCode": 92,
+  "url": "https://cdn.jsdelivr.net/gh/Nergan/cdn@main/netlazy/apk/netlazy-0.0.92.apk",
+  "release_notes": "The notification setting says these are desktop notifications in every interface language.\n\nCo-authored-by: Cursor <cursoragent@cursor.com>",
+  "sha256": "ea2885579312307f6c55613ef9573af1b3ead317db818b23535a26e84ed8750c"
 }
