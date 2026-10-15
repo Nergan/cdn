@@ -1,7 +1,7 @@
 {
-  "version": "0.0.94",
-  "versionCode": 94,
-  "url": "https://cdn.jsdelivr.net/gh/Nergan/cdn@main/netlazy/apk/netlazy-0.0.94.apk",
-  "release_notes": "Inbox filters hide every request of a turned-off type and stay as they were after reload.\n\nCo-authored-by: Cursor <cursoragent@cursor.com>",
-  "sha256": "bcd2af557ab4e1ade598118c9badd9bfe041c7d8634950aa3edb20e0a269679a"
+  "version": "0.0.95",
+  "versionCode": 95,
+  "url": "https://cdn.jsdelivr.net/gh/Nergan/cdn@main/netlazy/apk/netlazy-0.0.95.apk",
+  "release_notes": "The feed lists profiles by their last change, so an edit moves a card ahead of older untouched ones.\n\nCo-authored-by: Cursor <cursoragent@cursor.com>",
+  "sha256": "64ec66f33e7117a92f535b207f1ad711a63e8dd5ec4bdcc2eb7cc98f79b84708"
 }
