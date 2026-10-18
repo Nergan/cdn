@@ -1,7 +1,7 @@
 {
-  "version": "0.0.95",
-  "versionCode": 95,
-  "url": "https://cdn.jsdelivr.net/gh/Nergan/cdn@main/netlazy/apk/netlazy-0.0.95.apk",
-  "release_notes": "The feed lists profiles by their last change, so an edit moves a card ahead of older untouched ones.\n\nCo-authored-by: Cursor <cursoragent@cursor.com>",
-  "sha256": "64ec66f33e7117a92f535b207f1ad711a63e8dd5ec4bdcc2eb7cc98f79b84708"
+  "version": "0.0.96",
+  "versionCode": 96,
+  "url": "https://cdn.jsdelivr.net/gh/Nergan/cdn@main/netlazy/apk/netlazy-0.0.96.apk",
+  "release_notes": "Key rotation keeps the profile on the same document, so the new key is registered instead of being rolled back.\n\nCo-authored-by: Cursor <cursoragent@cursor.com>",
+  "sha256": "45b146fc72a4a085836cbc279c15506257d69eda2396714f804c6cc973dd9a0d"
 }
