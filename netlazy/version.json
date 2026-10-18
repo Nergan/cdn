@@ -1,7 +1,7 @@
 {
-  "version": "0.0.96",
-  "versionCode": 96,
-  "url": "https://cdn.jsdelivr.net/gh/Nergan/cdn@main/netlazy/apk/netlazy-0.0.96.apk",
-  "release_notes": "Key rotation keeps the profile on the same document, so the new key is registered instead of being rolled back.\n\nCo-authored-by: Cursor <cursoragent@cursor.com>",
-  "sha256": "45b146fc72a4a085836cbc279c15506257d69eda2396714f804c6cc973dd9a0d"
+  "version": "0.0.97",
+  "versionCode": 97,
+  "url": "https://cdn.jsdelivr.net/gh/Nergan/cdn@main/netlazy/apk/netlazy-0.0.97.apk",
+  "release_notes": "Keep agent instructions in the repository, including the paused project that hides its other notes.\n\nCo-authored-by: Cursor <cursoragent@cursor.com>",
+  "sha256": "9ea5baeef45e25e513369df051a9c74369e71be81e21c8976c829918a99d25a6"
 }
