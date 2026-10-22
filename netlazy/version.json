@@ -1,7 +1,7 @@
 {
-  "version": "0.0.97",
-  "versionCode": 97,
-  "url": "https://cdn.jsdelivr.net/gh/Nergan/cdn@main/netlazy/apk/netlazy-0.0.97.apk",
-  "release_notes": "Keep agent instructions in the repository, including the paused project that hides its other notes.\n\nCo-authored-by: Cursor <cursoragent@cursor.com>",
-  "sha256": "9ea5baeef45e25e513369df051a9c74369e71be81e21c8976c829918a99d25a6"
+  "version": "0.0.98",
+  "versionCode": 98,
+  "url": "https://cdn.jsdelivr.net/gh/Nergan/cdn@main/netlazy/apk/netlazy-0.0.98.apk",
+  "release_notes": "Make tag search answer compound phrases from elementary aliases.\n\nA typed phrase such as femdom or princess lands on each tag it is made of, while age, place, and fetish tags stay out of the cloud and every tag explains itself on hover.\n\nCo-authored-by: Cursor <cursoragent@cursor.com>",
+  "sha256": "a6bf0f875038b6c1bf90d98a4f548e2712af57bf587484796a3903a1f27ce45a"
 }
