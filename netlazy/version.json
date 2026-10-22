@@ -1,7 +1,7 @@
 {
-  "version": "0.0.98",
-  "versionCode": 98,
-  "url": "https://cdn.jsdelivr.net/gh/Nergan/cdn@main/netlazy/apk/netlazy-0.0.98.apk",
-  "release_notes": "Make tag search answer compound phrases from elementary aliases.\n\nA typed phrase such as femdom or princess lands on each tag it is made of, while age, place, and fetish tags stay out of the cloud and every tag explains itself on hover.\n\nCo-authored-by: Cursor <cursoragent@cursor.com>",
-  "sha256": "a6bf0f875038b6c1bf90d98a4f548e2712af57bf587484796a3903a1f27ce45a"
+  "version": "0.0.99",
+  "versionCode": 99,
+  "url": "https://cdn.jsdelivr.net/gh/Nergan/cdn@main/netlazy/apk/netlazy-0.0.99.apk",
+  "release_notes": "Say what a tag is in plain words, and stop femdom from pulling in soft.\n\nA typed word matches a label only when that label starts with it, so a longer phrase no longer answers for one word inside it.\n\nCo-authored-by: Cursor <cursoragent@cursor.com>",
+  "sha256": "980dd204af1e88942d59b47cbfd54ddd1a52e7b1040498b8187f6d4008ee7744"
 }
