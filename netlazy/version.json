@@ -1,7 +1,7 @@
 {
-  "version": "0.0.100",
-  "versionCode": 100,
-  "url": "https://cdn.jsdelivr.net/gh/Nergan/cdn@main/netlazy/apk/netlazy-0.0.100.apk",
-  "release_notes": "Write every tag description as its own sentence, with the right case and number.\n\nCo-authored-by: Cursor <cursoragent@cursor.com>",
-  "sha256": "3c8984d265430d83d35b67d2aa3d316b921c2cb98d3a23b654a20928878611d4"
+  "version": "0.0.101",
+  "versionCode": 101,
+  "url": "https://cdn.jsdelivr.net/gh/Nergan/cdn@main/netlazy/apk/netlazy-0.0.101.apk",
+  "release_notes": "Color the interface from the light outside, not from the clock.\n\nA summer morning stays bright, and DAYLIGHT_THEME=0 keeps the manual switch.\n\nCo-authored-by: Cursor <cursoragent@cursor.com>",
+  "sha256": "85579178e631aa9445e04a6f70b243ece95a429b86a4cfb2d4b0a91b4203c0d6"
 }
