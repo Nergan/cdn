@@ -1,7 +1,7 @@
 {
-  "version": "0.0.99",
-  "versionCode": 99,
-  "url": "https://cdn.jsdelivr.net/gh/Nergan/cdn@main/netlazy/apk/netlazy-0.0.99.apk",
-  "release_notes": "Say what a tag is in plain words, and stop femdom from pulling in soft.\n\nA typed word matches a label only when that label starts with it, so a longer phrase no longer answers for one word inside it.\n\nCo-authored-by: Cursor <cursoragent@cursor.com>",
-  "sha256": "980dd204af1e88942d59b47cbfd54ddd1a52e7b1040498b8187f6d4008ee7744"
+  "version": "0.0.100",
+  "versionCode": 100,
+  "url": "https://cdn.jsdelivr.net/gh/Nergan/cdn@main/netlazy/apk/netlazy-0.0.100.apk",
+  "release_notes": "Write every tag description as its own sentence, with the right case and number.\n\nCo-authored-by: Cursor <cursoragent@cursor.com>",
+  "sha256": "3c8984d265430d83d35b67d2aa3d316b921c2cb98d3a23b654a20928878611d4"
 }
