@@ -1,7 +1,7 @@
 {
-  "version": "0.0.102",
-  "versionCode": 102,
-  "url": "https://cdn.jsdelivr.net/gh/Nergan/cdn@main/netlazy/apk/netlazy-0.0.102.apk",
-  "release_notes": "Tint the sky theme with the local weather and the place.\n\nHide the manual theme button while that sky theme is on.\n\nCo-authored-by: Cursor <cursoragent@cursor.com>",
-  "sha256": "971eb31071c9e1d5c800ae8e33a73ef4152c5313128d7d1b67ab3b8d0de1f29d"
+  "version": "0.0.103",
+  "versionCode": 103,
+  "url": "https://cdn.jsdelivr.net/gh/Nergan/cdn@main/netlazy/apk/netlazy-0.0.103.apk",
+  "release_notes": "Center the language and key buttons when the sky theme is on.\n\nKeep the stacked sidebar when it is collapsed, and leave the phone layout alone.\n\nCo-authored-by: Cursor <cursoragent@cursor.com>",
+  "sha256": "bbe11a8e1047ef365436de9a00741e2426f4ae41efda5db18f9537dbb5d19776"
 }
