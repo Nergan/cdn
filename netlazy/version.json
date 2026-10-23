@@ -1,7 +1,7 @@
 {
-  "version": "0.0.103",
-  "versionCode": 103,
-  "url": "https://cdn.jsdelivr.net/gh/Nergan/cdn@main/netlazy/apk/netlazy-0.0.103.apk",
-  "release_notes": "Center the language and key buttons when the sky theme is on.\n\nKeep the stacked sidebar when it is collapsed, and leave the phone layout alone.\n\nCo-authored-by: Cursor <cursoragent@cursor.com>",
-  "sha256": "bbe11a8e1047ef365436de9a00741e2426f4ae41efda5db18f9537dbb5d19776"
+  "version": "0.0.104",
+  "versionCode": 104,
+  "url": "https://cdn.jsdelivr.net/gh/Nergan/cdn@main/netlazy/apk/netlazy-0.0.104.apk",
+  "release_notes": "Run the hub on Python 3.14.9 and the newest libraries that still install together.\n\naiogram and sherpa-onnx have no Python 3.15 build, and aiogram still rejects pydantic 2.14.\n\nCo-authored-by: Cursor <cursoragent@cursor.com>",
+  "sha256": "b28e10a84ba501e1c1944726d7c179250f59928d1b95111ee551ce18b45b14d9"
 }
