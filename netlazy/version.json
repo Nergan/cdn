@@ -1,7 +1,7 @@
 {
-  "version": "0.0.104",
-  "versionCode": 104,
-  "url": "https://cdn.jsdelivr.net/gh/Nergan/cdn@main/netlazy/apk/netlazy-0.0.104.apk",
-  "release_notes": "Run the hub on Python 3.14.9 and the newest libraries that still install together.\n\naiogram and sherpa-onnx have no Python 3.15 build, and aiogram still rejects pydantic 2.14.\n\nCo-authored-by: Cursor <cursoragent@cursor.com>",
-  "sha256": "b28e10a84ba501e1c1944726d7c179250f59928d1b95111ee551ce18b45b14d9"
+  "version": "0.0.105",
+  "versionCode": 105,
+  "url": "https://cdn.jsdelivr.net/gh/Nergan/cdn@main/netlazy/apk/netlazy-0.0.105.apk",
+  "release_notes": "Turn the sky colors off and accept profile videos the page already offers.\n\nThe tag list in My profile closed after every check, and the Space refused a 12 MB video because its upload cap was 10 MB.\n\nCo-authored-by: Cursor <cursoragent@cursor.com>",
+  "sha256": "17bbaaf8fdb2e0bb393237d3a3ffc92cc9d9439ecdb6704c63ac0d3d60d527e7"
 }
