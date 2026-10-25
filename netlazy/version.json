@@ -1,7 +1,7 @@
 {
-  "version": "0.0.105",
-  "versionCode": 105,
-  "url": "https://cdn.jsdelivr.net/gh/Nergan/cdn@main/netlazy/apk/netlazy-0.0.105.apk",
-  "release_notes": "Turn the sky colors off and accept profile videos the page already offers.\n\nThe tag list in My profile closed after every check, and the Space refused a 12 MB video because its upload cap was 10 MB.\n\nCo-authored-by: Cursor <cursoragent@cursor.com>",
-  "sha256": "17bbaaf8fdb2e0bb393237d3a3ffc92cc9d9439ecdb6704c63ac0d3d60d527e7"
+  "version": "0.0.106",
+  "versionCode": 106,
+  "url": "https://cdn.jsdelivr.net/gh/Nergan/cdn@main/netlazy/apk/netlazy-0.0.106.apk",
+  "release_notes": "Show every fetish tag in search, including submissive.\n\nThe menu kept only the first 15 matches, so submissive fell off the alphabetical list. Tags whose name already contained that word had lost the label.\n\nCo-authored-by: Cursor <cursoragent@cursor.com>",
+  "sha256": "b652ff34953777d58c11f7310cf5481858d7c25ee63d18acc458077ba899f054"
 }
