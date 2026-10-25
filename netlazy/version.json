@@ -1,7 +1,7 @@
 {
-  "version": "0.0.106",
-  "versionCode": 106,
-  "url": "https://cdn.jsdelivr.net/gh/Nergan/cdn@main/netlazy/apk/netlazy-0.0.106.apk",
-  "release_notes": "Show every fetish tag in search, including submissive.\n\nThe menu kept only the first 15 matches, so submissive fell off the alphabetical list. Tags whose name already contained that word had lost the label.\n\nCo-authored-by: Cursor <cursoragent@cursor.com>",
-  "sha256": "b652ff34953777d58c11f7310cf5481858d7c25ee63d18acc458077ba899f054"
+  "version": "0.0.107",
+  "versionCode": 107,
+  "url": "https://cdn.jsdelivr.net/gh/Nergan/cdn@main/netlazy/apk/netlazy-0.0.107.apk",
+  "release_notes": "Show every tag match instead of cutting the list.\n\nA short query can match hundreds of tags, and the old cap hid the rest.\n\nCo-authored-by: Cursor <cursoragent@cursor.com>",
+  "sha256": "a117acc9de74860710427d7f1d0231f9c1434bd48f48b97e8f04117c861f7b2e"
 }
