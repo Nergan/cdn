@@ -29,7 +29,6 @@
         width: 44px;
         height: 44px;
         position: relative;
-        transition: transform 0.3s cubic-bezier(0.2, 0.9, 0.4, 1.1);
         text-decoration: none;
         outline: none;
         cursor: grab;
@@ -38,14 +37,25 @@
         -webkit-touch-callout: none;
       }
 
-      :host(.is-dragging) .donate-button {
-        cursor: grabbing;
-        transform: none;
-        transition: none;
+      .face {
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: relative;
+        transform-origin: center;
       }
 
-      .donate-button:hover {
-        transform: scale(1.15);
+      .donate-button:hover .face {
+        transform: scale(1.12);
+      }
+
+      :host(.is-dragging) .donate-button {
+        cursor: grabbing;
+      }
+
+      :host(.is-dragging) .face {
+        transform: none;
+        transition: none;
       }
 
       .donate-button img,
@@ -56,14 +66,16 @@
         width: 100%;
         height: 100%;
         object-fit: contain;
-        image-rendering: pixelated;
-        transition: opacity 0.2s ease-in-out;
         border: 0;
         margin: 0;
         padding: 0;
         pointer-events: none;
         -webkit-user-drag: none;
         user-select: none;
+      }
+
+      .donate-button img {
+        image-rendering: pixelated;
       }
 
       .donate-button video {
@@ -85,14 +97,14 @@
       }
 
       @media (prefers-reduced-motion: reduce) {
-        .donate-button {
-          transition: none;
-        }
+        .donate-button:hover .face { transform: none; }
       }
     </style>
     <a href="https://boosty.to/nargan/donate" target="_blank" rel="noopener noreferrer" class="donate-button" id="donate-link" draggable="false">
-      <img src="https://cdn.jsdelivr.net/gh/Nergan/media@main/donate-img.webp" alt="Donate">
-      <video src="https://cdn.jsdelivr.net/gh/Nergan/media@main/donate-animation.webm" autoplay loop muted playsinline></video>
+      <span class="face">
+        <img src="https://cdn.jsdelivr.net/gh/Nergan/media@main/donate-img.webp" alt="Donate">
+        <video src="https://cdn.jsdelivr.net/gh/Nergan/media@main/donate-animation.webm" muted loop playsinline preload="auto"></video>
+      </span>
     </a>
   `;
 
@@ -102,6 +114,14 @@
       const shadow = this.attachShadow({ mode: 'open' });
       shadow.appendChild(TEMPLATE.content.cloneNode(true));
       this.linkEl = shadow.getElementById('donate-link');
+      this.videoEl = shadow.querySelector('video');
+      if (this.videoEl) {
+        this.videoEl.muted = true;
+        this.videoEl.defaultMuted = true;
+        this.videoEl.loop = true;
+        this.videoEl.autoplay = false;
+        this.videoEl.pause();
+      }
     }
 
     connectedCallback() {
@@ -345,6 +365,18 @@
         window.addEventListener('pointercancel', endDrag);
       };
 
+      const playClip = () => {
+        const video = this.videoEl;
+        if (!video) return;
+        try { video.currentTime = 0; } catch (e) { /* The clip may not be seekable yet. */ }
+        const pending = video.play();
+        if (pending && pending.catch) pending.catch(() => {});
+      };
+      const stopClip = () => {
+        if (this.videoEl) this.videoEl.pause();
+      };
+      link.addEventListener('pointerenter', playClip);
+      link.addEventListener('pointerleave', stopClip);
       link.addEventListener('pointerdown', onPointerDown);
       link.addEventListener('click', onClick, true);
       link.addEventListener('auxclick', onClick, true);
