@@ -1,7 +1,7 @@
 {
-  "version": "0.0.108",
-  "versionCode": 108,
-  "url": "https://cdn.jsdelivr.net/gh/Nergan/cdn@main/netlazy/apk/netlazy-0.0.108.apk",
-  "release_notes": "Tell agents to keep a reusable lesson and which skills apply here.",
-  "sha256": "8856d25030ba2ea7cd0e61791adce288a961a679e34b33965dead4261227f21e"
+  "version": "0.0.109",
+  "versionCode": 109,
+  "url": "https://cdn.jsdelivr.net/gh/Nergan/cdn@main/netlazy/apk/netlazy-0.0.109.apk",
+  "release_notes": "Note when Craft Anything is the right tool here.",
+  "sha256": "87f6bd7bd922d205736ccdd53ebfc957c248b0b589ca9534e035cc4027602632"
 }
