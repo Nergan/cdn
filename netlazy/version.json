@@ -1,7 +1,7 @@
 {
-  "version": "0.0.109",
-  "versionCode": 109,
-  "url": "https://cdn.jsdelivr.net/gh/Nergan/cdn@main/netlazy/apk/netlazy-0.0.109.apk",
-  "release_notes": "Note when Craft Anything is the right tool here.",
-  "sha256": "87f6bd7bd922d205736ccdd53ebfc957c248b0b589ca9534e035cc4027602632"
+  "version": "0.0.110",
+  "versionCode": 110,
+  "url": "https://cdn.jsdelivr.net/gh/Nergan/cdn@main/netlazy/apk/netlazy-0.0.110.apk",
+  "release_notes": "Patch the web and Android dependency advisories.\n\nVite 8.2.6, Vitest 4.1.12, Wrangler 4.161.0, Capacitor 6.2.3, and the current Vue and Axios releases close the issues npm audit reported.",
+  "sha256": "aae86eb2581cc2c562f846812262786238cf1ebe19a053a081fcd5ae9dbb7fba"
 }
